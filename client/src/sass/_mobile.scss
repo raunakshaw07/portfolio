@@ -1,0 +1,280 @@
+@include mediaSm {
+  html,
+  body {
+    font-size: 8px;
+  }
+
+  .inner-about {
+    flex-direction: column;
+
+    .left-side {
+      width: 100%;
+      height: 35vh;
+      .head {
+        display: grid;
+        grid-template-columns: 0.2fr 1.8fr;
+      }
+      .details {
+        font-size: 0.6rem;
+      }
+    }
+    right-side {
+      width: 100vw;
+      height: 60vh;
+      padding: 0rem 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .card-style {
+        width: 100vw;
+      }
+    }
+  }
+
+  .works {
+    .tabContent {
+      height: 72vh;
+      width: 100%;
+    }
+    .work-grid {
+      .custom-card {
+        .work-details {
+          .button {
+            margin-right: 1rem;
+          }
+        }
+      }
+    }
+  }
+  .msg-body {
+    .message-body {
+      width: 75%;
+      height: 55vh;
+      padding: 0.3rem 1rem;
+      margin: 0 1rem;
+      overflow: scroll;
+    }
+  }
+  .message-body::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@include mediaMd {
+  html,
+  body {
+    font-size: 11px;
+  }
+
+  .inner-about {
+    flex-direction: column;
+
+    .left-side {
+      width: 100%;
+      height: 43vh;
+      .head {
+        display: grid;
+        grid-template-columns: 0.2fr 1.8fr;
+      }
+      .details {
+        font-size: 0.6rem;
+      }
+    }
+    right-side {
+      width: 100%;
+      height: 50vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .card-style {
+        width: 100vw;
+      }
+    }
+  }
+
+  .works {
+    .tabContent {
+      height: 65vh;
+      width: 100%;
+    }
+    .work-grid {
+      .custom-card {
+        .work-details {
+          .button {
+            margin-right: 1rem;
+          }
+        }
+      }
+    }
+  }
+
+  .msg-body {
+    .message-body {
+      width: 80%;
+      height: 45vh;
+      padding: 0.3rem 1rem;
+      margin: 0 1rem;
+      overflow: scroll;
+    }
+  }
+  .message-body::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@include mediaLg {
+  html,
+  body {
+    font-size: 14px;
+  }
+
+  .about {
+    .left-side {
+      height: 100vh;
+      padding: 5rem 2rem 2rem 2rem;
+      width: 50%;
+      .details {
+        margin-top: 1.5rem;
+        font-size: 0.6rem;
+        justify-content: stretch;
+      }
+    }
+    .right-side {
+      padding-top: 2rem;
+      height: 100vh;
+      width: 50%;
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+
+      .card-style {
+        .card-header {
+          font-size: 1.5rem;
+        }
+      }
+      .gridColumn {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  }
+
+  .works {
+    .tabContent {
+      height: 65vh;
+      width: 100%;
+    }
+    .work-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+      .custom-card {
+        .work-details {
+          h1 {
+            font-size: 1rem;
+          }
+          p {
+            font-size: 0.6rem;
+          }
+          .button {
+            font-size: 0.6rem;
+            margin-right: 0.35rem;
+          }
+        }
+      }
+    }
+  }
+
+  .msg-body {
+    .message-body {
+      width: 85%;
+      height: 40vh;
+      padding: 0.3rem 1rem;
+      margin: 0 1rem;
+      overflow: scroll;
+    }
+  }
+  .message-body::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@include mediaXl {
+  html,
+  body {
+    font-size: 14px;
+  }
+
+  .about {
+    .left-side {
+      height: 100vh;
+      padding: 4rem 2rem 2rem 2rem;
+      width: 50%;
+      .head {
+        display: grid;
+        grid-template-columns: 0.2fr 1.8fr;
+      }
+      .details {
+        margin-top: 1.5rem;
+        font-size: 0.9rem;
+        justify-content: stretch;
+      }
+    }
+    .right-side {
+      height: 100vh;
+      width: 50%;
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+
+      .card-style {
+        .card-header {
+          h1 {
+            font-size: 1.6rem;
+          }
+        }
+        .card-body {
+          p {
+            font-size: 0.9rem;
+          }
+        }
+      }
+      .gridColumn {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  }
+
+  .works {
+    .tabContent {
+      height: 65vh;
+      width: 100%;
+    }
+    .work-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+      .custom-card {
+        .work-details {
+          .button {
+            margin-right: 1rem;
+          }
+        }
+      }
+    }
+  }
+
+  .msg-body {
+    .message-body {
+      width: 90%;
+      height: 40vh;
+      padding: 0.3rem 1rem;
+      margin: 0 1rem;
+      overflow: scroll;
+    }
+  }
+  .message-body::-webkit-scrollbar {
+    display: none;
+  }
+}

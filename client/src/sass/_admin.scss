@@ -1,0 +1,29 @@
+.custom {
+  background-image: linear-gradient(
+    rgba(darken($overlay, 7), 0.5),
+    rgba(lighten($primary-color, 7), 0.5)
+  );
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+
+  .nav-bg {
+    background: rgba(darken($overlay, 7), 0.7);
+  }
+
+  .itemCenter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 89vh;
+  }
+}
+
+.inbox-container {
+  height: 85vh;
+  overflow: scroll;
+}
+.inbox-container::-webkit-scrollbar {
+  display: none;
+}

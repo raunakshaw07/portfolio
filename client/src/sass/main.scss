@@ -1,0 +1,301 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import "config";
+@import "menu";
+@import "admin";
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 3px;
+}
+.App {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background: $background-image;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  filter: blur(6px);
+  background-attachment: fixed;
+  position: absolute;
+  z-index: -1;
+}
+
+.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1rem;
+  height: 5rem;
+  color: $primary-color;
+  border-bottom: 5px solid $primary-color;
+  background: rgba(lighten($primary-color, 3), 0.3);
+}
+.container-custom {
+  position: relative;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100%;
+  padding-left: 3rem;
+  background-image: linear-gradient(
+    rgba(darken($overlay, 7), 0.5),
+    rgba(lighten($primary-color, 7), 0.5)
+  );
+  z-index: 1;
+}
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.button {
+  @include easeInOut();
+  padding: 0.5rem 1rem;
+  color: #fff;
+  border: 2px solid darken($color: $primary-color, $amount: 5);
+  border-radius: 20px;
+  text-shadow: 2px 2px 10px $overlay;
+}
+.button:hover {
+  color: #000;
+  text-decoration: none;
+  background-color: $primary-color;
+  box-shadow: 0px 2px 10px $overlay;
+}
+
+// About Page
+.watermark {
+  position: fixed;
+  top: -10px;
+  z-index: -2;
+  opacity: 0.1;
+  font-size: 12rem;
+  user-select: none;
+}
+
+.about {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .inner-about {
+    display: flex;
+    margin-right: 4rem;
+
+    .left-side {
+      display: grid;
+      grid-template-rows: 0.3fr 1.7fr;
+
+      .head {
+        .image {
+          background: $model no-repeat center center/cover;
+          height: 12rem;
+          width: 12rem;
+          border: 5px solid lighten($color: $overlay, $amount: 5);
+          border-radius: 50%;
+          margin-right: 2.5rem;
+        }
+
+        .name {
+          height: 100%;
+          width: 100%;
+          display: flex;
+          align-items: center;
+
+          h1 {
+            font-size: 3.5rem;
+          }
+        }
+      }
+    }
+
+    .right-side {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .card-style {
+        width: 100%;
+        background-color: rgba(
+          lighten($color: $primary-color, $amount: 2),
+          0.4
+        );
+
+        h1 {
+          font-size: 1.2rem;
+        }
+        p {
+          font-size: 0.7rem;
+          letter-spacing: 1px;
+        }
+      }
+    }
+  }
+}
+
+// Works Page
+.works {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+  .inner-work {
+    height: 75%;
+    width: 95%;
+    margin-right: 5rem;
+
+    .menu {
+      ul {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        li {
+          list-style: none;
+          float: left;
+          text-shadow: 2px 2px 5px #000;
+          font-size: 2rem;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .tabContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(lighten($primary-color, 3), 0.3);
+    overflow: scroll;
+
+    .inner-content {
+      height: 85%;
+      width: 90%;
+      .custom-card {
+        background: rgba(lighten($overlay, 3), 0.3);
+        display: grid;
+        grid-gap: 2rem;
+        grid-template-columns: 0.8fr 1.2fr;
+        align-items: center;
+        padding: 1rem;
+        margin: 0.5rem;
+
+        .image {
+          background: $background-image;
+          background-size: cover;
+          background-position: bottom;
+          height: 100%;
+          width: 100%;
+
+          img {
+            height: 100%;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+  .tabContent::-webkit-scrollbar {
+    background: rgba(lighten($primary-color, 3), 0.04);
+    height: 1.5rem;
+  }
+  .tabContent::-webkit-scrollbar:vertical {
+    display: none;
+  }
+}
+
+// Contact
+.contact {
+  .personal-details {
+    width: 50%;
+    margin-top: 1rem;
+
+    ul {
+      li {
+        text-align: center;
+        list-style: none;
+        padding: 1rem;
+      }
+    }
+  }
+
+  .msg-form {
+    width: 80%;
+    input {
+      background: none;
+      // margin: 0.5rem;
+      border: none;
+      border-bottom: 1px solid #fff;
+      outline: none;
+      padding: 1rem;
+      letter-spacing: 2px;
+      color: #fff;
+    }
+    input::placeholder {
+      color: #e2e2e2;
+      font-size: 1.1rem;
+      // padding: 1rem;
+      letter-spacing: 2px;
+    }
+    textarea {
+      height: 8rem;
+      width: 100%;
+      background: none;
+      color: #fff;
+      margin: 1rem 0;
+      padding: 0 1rem;
+      border: none;
+      border-bottom: 1px solid #fff;
+      outline: none;
+      letter-spacing: 2px;
+    }
+    textarea::placeholder {
+      color: #e2e2e2;
+      font-size: 1.1rem;
+      // padding: 0 1rem;
+      letter-spacing: 2px;
+    }
+    button {
+      background-color: rgba($overlay, 0.5);
+    }
+    button:hover {
+      color: #fff;
+      font-size: 1.1rem;
+    }
+  }
+
+  .social-icons {
+    display: flex;
+    .link {
+      text-decoration: none;
+
+      p {
+        color: #fff;
+        @include easeInOut;
+      }
+      i {
+        font-size: 4rem;
+        color: #fff;
+        margin: 2.4rem;
+        @include easeInOut;
+      }
+    }
+    .link:hover {
+      p:hover,
+      i:hover {
+        color: lighten($color: $primary-color, $amount: 2);
+      }
+    }
+  }
+}
+@import "mobile";
